@@ -8,10 +8,45 @@ namespace HomeWork11Class
     {
         private string Name { get; set; }
         private string FirstName { get; set; }
-        private string Group { get; set; }
+        private string Group;       
         private string Facultet { get; set; }
         private int Cours { get; set; }
         private int Age{ get; set; }
+
+        public string group
+        {
+            get
+            {
+                return Group;
+            }
+            set
+            {
+                if(string.IsNullOrWhiteSpace(Group))
+                {
+                    throw new Exception("Значение group пустое");                
+                }
+                group value;
+            
+            }
+        
+        }
+        public string facultet 
+        {
+            get
+            {
+                return Facultet;
+            }
+            set
+            {
+                if(string.IsNullOrWhiteSpace(Facultet))
+                {
+                    throw new Exception("Значение Facultet пустое");                
+                }
+                facultet value;
+            
+            }
+        }
+        
         
         public Student(string name, string firstName, string group, string facultet, int cours, int age)
         {
@@ -32,22 +67,8 @@ namespace HomeWork11Class
 
         public void Transfer(string group, string facultet)
         {
-            if (group != "")
-            {
-                Group = group;
-            }
-            else Error("group");
-
-            if (facultet != "")
-            {
-                Facultet = facultet;
-            }
-            else Error("facultet");
-
-        }
-        private void Error(string input)
-        {            
-            Console.WriteLine($"\nЗначение {input} пустое");
+            Group = group;
+            Facultet = facultet;         
         }
         
     }
