@@ -7,11 +7,11 @@ namespace HomeWork11Class
     class Student
     {
         private string Name { get; set; }
-        private string FirstName { get; set; }
-        private string Group;
-        private string Facultet;
+        private string FirstName { get; set; }        
         private int Cours { get; set; }
         private int Age { get; set; }
+        private string Group;
+        private string Facultet;
 
         public string group
         {
