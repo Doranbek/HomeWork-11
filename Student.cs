@@ -8,10 +8,10 @@ namespace HomeWork11Class
     {
         private string Name { get; set; }
         private string FirstName { get; set; }
-        private string Group;       
-        private string Facultet { get; set; }
+        private string Group;
+        private string Facultet;
         private int Cours { get; set; }
-        private int Age{ get; set; }
+        private int Age { get; set; }
 
         public string group
         {
@@ -21,16 +21,16 @@ namespace HomeWork11Class
             }
             set
             {
-                if(string.IsNullOrWhiteSpace(Group))
+                if (string.IsNullOrEmpty(Facultet))
                 {
-                    throw new Exception("Значение group пустое");                
+                    Console.WriteLine("Значение group пустое");
                 }
-                group value;
-            
+                group = value;
+
             }
-        
+
         }
-        public string facultet 
+        public string facultet
         {
             get
             {
@@ -38,16 +38,16 @@ namespace HomeWork11Class
             }
             set
             {
-                if(string.IsNullOrWhiteSpace(Facultet))
+                if (string.IsNullOrEmpty(Facultet))
                 {
-                    throw new Exception("Значение Facultet пустое");                
+                    Console.WriteLine("Значение Facultet пустое");
                 }
-                facultet value;
-            
+                facultet = value;
+
             }
         }
-        
-        
+
+
         public Student(string name, string firstName, string group, string facultet, int cours, int age)
         {
             Name = name;
@@ -60,7 +60,7 @@ namespace HomeWork11Class
 
         public void Info()
         {
-            
+
             Console.WriteLine($"\nИмя студента:{Name}\nФамилия Студента:{FirstName}\n" +
                 $"Группа:{Group}\nФакультет:{Facultet}\nКурс:{Cours}\nВозраст:{Age}");
         }
@@ -68,8 +68,8 @@ namespace HomeWork11Class
         public void Transfer(string group, string facultet)
         {
             Group = group;
-            Facultet = facultet;         
+            Facultet = facultet;
         }
-        
+
     }
 }
