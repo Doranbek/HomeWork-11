@@ -6,12 +6,13 @@ namespace HomeWork11Class
 {
     class Student
     {
-        private string Name { get; set; }
-        private string firstName { get; set; }        
-        private int Cours { get; set; }
-        private int Age { get; set; }
         private string group;
         private string facultet;
+        private string Name { get; set; }
+        private string FirstName { get; set; }        
+        private int Cours { get; set; }
+        private int Age { get; set; }
+        
 
         public string Group
         {
@@ -19,13 +20,13 @@ namespace HomeWork11Class
             {
                 return group;
             }
-            set
+            private set
             {
-                if (Group==string.Empty)
+                if (value == "")
                 {
                     Console.WriteLine("Значение group пустое");
                 }
-                Group = value;
+                group = value;
             }
         }
 
@@ -37,7 +38,7 @@ namespace HomeWork11Class
             }
             set
             {
-                if (Facultet=string.Empty)
+                if (value=="")
                 {
                     Console.WriteLine("Значение Facultet пустое");
                 }
